@@ -1,0 +1,33 @@
+﻿
+@model Application.Instructors.Queries.GetInstructorsList.InstructorListVm;
+@{
+    ViewData["courses"] = Model.Instructors;
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Instructors)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)<br />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)<br />
+                </td>
+                <td>
+                    <form method="post" action="/instructors/delete/@item.Id">
+                                                                        <button type="submit" class=" btn btn-primary">delete</button>
+                                                    
+                                                                </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/instructors/create" class=" btn btn-primary">add instructor</a>

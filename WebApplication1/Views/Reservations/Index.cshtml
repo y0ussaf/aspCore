@@ -1,0 +1,47 @@
+﻿
+@model Application.Reservations.Queries.GetReservationsList.ReservationsListVm;
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">id</th>
+        <th scope="col">Start</th>
+        <th scope="col">End</th>
+        <th scope="col">Instructor</th>
+        <th scope="col">Course</th>
+        <th scope="col">Room</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in @Model.Reservations)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)<br/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Start)<br/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End)<br/>
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstructorName)<br/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseName)<br/>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomName)<br/>
+            </td>
+            <td>
+                  <form method="post" action="/reservations/delete/@item.Id">
+                      <button type="submit" class=" btn btn-primary">delete</button>
+                  </form>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+    <a href="/reservations/create" class=" btn btn-primary">Reserve room</a>

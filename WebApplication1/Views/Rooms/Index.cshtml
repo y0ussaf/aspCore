@@ -1,0 +1,32 @@
+﻿
+@model Application.Rooms.Queries.GetRoomsList.RoomListVm;
+@{
+    ViewData["rooms"] = Model.Rooms;
+}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">id</th>
+            <th scope="col">name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Rooms)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)<br />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)<br />
+                </td>
+                <td>
+                    <form method="post" action="/rooms/delete/@item.Id">
+                        <button type="submit" class=" btn btn-primary">delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a href="/rooms/create" class=" btn btn-primary">Add room</a>

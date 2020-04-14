@@ -1,0 +1,8 @@
+C:\Users\hp\source\repos\Api\Common\bin\Debug\netcoreapp3.1\Common.deps.json
+C:\Users\hp\source\repos\Api\Common\bin\Debug\netcoreapp3.1\Common.dll
+C:\Users\hp\source\repos\Api\Common\bin\Debug\netcoreapp3.1\Common.pdb
+C:\Users\hp\source\repos\Api\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfoInputs.cache
+C:\Users\hp\source\repos\Api\Common\obj\Debug\netcoreapp3.1\Common.AssemblyInfo.cs
+C:\Users\hp\source\repos\Api\Common\obj\Debug\netcoreapp3.1\Common.dll
+C:\Users\hp\source\repos\Api\Common\obj\Debug\netcoreapp3.1\Common.pdb
+C:\Users\hp\source\repos\Api\Common\obj\Debug\netcoreapp3.1\Common.csproj.CoreCompileInputs.cache
